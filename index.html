@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer with To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>The Pomodoro Technique</h1>
+    
+    <!-- Animated Text -->
+    <div id="animated-text-container">
+      <span id="animated-text">Selamat Datang</span>
+    </div>
+
+    <div id="timer-container">
+        <h2 class="title">Study Timer</h2>
+        <input type="number" id="study-time" placeholder="Study Time (minutes)" min="1">
+        <input type="number" id="break-time" placeholder="Break Time (minutes)" min="1">
+        <button id="start-btn">Start Timer</button>
+        <button id="reset-btn">Reset Timer</button>
+        <p id="timer-display">00:00</p>
+      </div>
+
+      <div id="todo-container">
+        <h2 class="title">To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a new task">
+        <button id="add-todo">Add Task</button>
+        <ul id="todo-items">
+          <!-- Item tugas akan ditambahkan di sini secara dinamis -->
+          <li>
+            <button class="complete-btn">Selesai</button>
+            Tugas pertama
+            <button class="delete-btn">Hapus</button>
+          </li>
+          <!-- Tugas lainnya akan muncul di bawah -->
+        </ul>
+      </div>
+      
+
+    <div class="spotify">
+      <h2>Spotify</h2>
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/7JlOmCqozJuWMURtba2D12" 
+        width="100%" 
+        height="352" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Layout untuk konten utama */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Pastikan halaman mengisi layar */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Latar belakang lembut */
+}
+
+/* Animasi untuk teks */
+#animated-text-container {
+  margin-top: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveText {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+#animated-text {
+  animation: moveText 5s infinite;
+}
+
+/* Konten lainnya, sama seperti sebelumnya */
+.title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333; /* Warna teks gelap */
+}
+
+/* Container Timer */
+#timer-container {
+  flex: 0 1 auto; /* Timer tetap di atas */
+  margin-top: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Gaya tambahan untuk timer display */
+#timer-display {
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333; /* Warna teks yang lebih gelap */
+}
+
+/* Tombol Timer */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50; /* Warna tombol hijau */
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049; /* Tombol hijau lebih gelap saat hover */
+}
+
+/* Tombol Reset */
+#reset-btn {
+  background-color: #f44336; /* Warna tombol reset merah */
+}
+
+#reset-btn:hover {
+  background-color: #e53935; /* Merah lebih gelap saat hover */
+}
+
+/* Input fields */
+input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fafafa; /* Latar belakang input */
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50; /* Warna border saat fokus */
+}
+
+/* Container untuk To-Do List */
+#todo-container {
+  flex: 1 1 auto; /* To-Do List bisa berkembang sesuai panjang konten */
+  max-height: 70vh; /* Batas tinggi agar tidak terlalu tinggi */
+  overflow-y: auto; /* Scrollable area untuk To-Do List */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+/* Gaya untuk item To-Do List */
+#todo-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#todo-items li {
+  margin: 15px 0; /* Lebih rapi dengan jarak yang lebih kecil */
+  padding: 12px;
+  background-color: #f9f9f9; /* Latar belakang item */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#todo-items li:hover {
+  background-color: #e0e0e0; /* Warna saat item di-hover */
+}
+
+#todo-items li.completed {
+  text-decoration: line-through;
+  background-color: #d3ffd3; /* Warna latar belakang item selesai */
+}
+
+/* Tombol delete (diubah warna menjadi merah) */
+li button.delete-btn {
+  background-color: #f44336 !important; /* Tombol hapus warna merah */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 10px;
+  float: right;
+}
+
+li button.delete-btn:hover {
+  background-color: #e53935 !important; /* Warna lebih gelap saat hover */
+}
+
+/* Tombol selesai */
+#todo-items li .complete-btn {
+  background-color: #4CAF50; /* Tombol selesai hijau */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  float: left; /* Letakkan di sebelah kiri */
+  margin-bottom: 10px; /* Spasi antara tombol selesai dan tombol hapus */
+}
+
+#todo-items li .complete-btn:hover {
+  background-color: #45a049; /* Warna lebih gelap saat hover */
+}
+
+/* Pengaturan untuk elemen yang lebih kecil */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  #timer-container, #todo-container {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+}
